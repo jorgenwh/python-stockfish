@@ -7,6 +7,8 @@ OPTIONS = {
     "MultiPV": int,
 }
 
+DEFAULT_SEARCH_TIME = 2
+
 class Stockfish:
     def __init__(self):
         self.engine = _C.EngineWrapper()
@@ -47,16 +49,12 @@ class Stockfish:
         return self.engine.nodes()
 
     def search(self, think_time=None, nodes=None):
-        if think_time is not None:
+        if think_time is not None or (think_time is None and nodes is None):
             self.go()
-            time.sleep(think_time)
+            time.sleep(think_time if think_time is not None else DEFAULT_SEARCH_TIME)
             self.stop()
         elif nodes is not None:
             self.go_nodes_limit(nodes)
-        else:
-            self.go()
-            time.sleep(2)
-            self.stop()
 
     def go(self):
         self.engine.go()

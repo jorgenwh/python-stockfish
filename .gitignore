@@ -31,7 +31,6 @@
 *.out
 *.app
 
-*.nnue
 main.py
 venv/
 *.egg-info

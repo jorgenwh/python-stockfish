@@ -47,8 +47,8 @@ namespace {
 #if !defined(_MSC_VER) && !defined(NNUE_EMBEDDING_OFF)
 //INCBIN(EmbeddedNNUEBig, EvalFileDefaultNameBig);
 //INCBIN(EmbeddedNNUESmall, EvalFileDefaultNameSmall);
-INCBIN(EmbeddedNNUEBig, "/home/jorgen/src/python-stockfish/nn-c721dfca8cd3.nnue");
-INCBIN(EmbeddedNNUESmall, "/home/jorgen/src/python-stockfish/nn-baff1ede1f90.nnue");
+INCBIN(EmbeddedNNUEBig, "/home/jorgen/src/python-stockfish/nnue/nn-c721dfca8cd3.nnue");
+INCBIN(EmbeddedNNUESmall, "/home/jorgen/src/python-stockfish/nnue/nn-baff1ede1f90.nnue");
 #else
 const unsigned char        gEmbeddedNNUEBigData[1]   = {0x0};
 const unsigned char* const gEmbeddedNNUEBigEnd       = &gEmbeddedNNUEBigData[1];
