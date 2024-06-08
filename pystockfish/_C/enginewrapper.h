@@ -49,6 +49,8 @@ public:
     int side_to_move() const;
     std::string visualize() const;
     std::string tostring() const;
+
+    int rule50_count() const;
 private:
     Engine* engine_m;
     std::unordered_map<std::string, std::string> evaluations_m;

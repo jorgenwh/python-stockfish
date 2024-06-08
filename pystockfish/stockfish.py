@@ -65,6 +65,9 @@ class Stockfish:
     def stop(self):
         self.engine.stop()
 
+    def rule50_count(self):
+        return self.engine.rule50_count()
+
     def visualize(self):
         return self.engine.visualize()
 

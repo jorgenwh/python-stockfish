@@ -149,6 +149,10 @@ std::string EngineWrapper::tostring() const {
     return oss.str();
 }
 
+int EngineWrapper::rule50_count() const {
+    return engine_m->rule50_count();
+}
+
 void EngineWrapper::on_update_full(const Engine::InfoFull& info, const Option& showWDL) {
     nodes_m = info.nodes;
 

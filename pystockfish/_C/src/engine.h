@@ -93,6 +93,10 @@ class Engine {
       return pos.side_to_move();
     }
 
+    int rule50_count() const {
+      return pos.rule50_count();
+    }
+
    private:
     const std::string binaryDirectory;
 

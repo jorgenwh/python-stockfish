@@ -28,6 +28,7 @@ PYBIND11_MODULE(pystockfish_C, m) {
         .def("side_to_move", &EngineWrapper::side_to_move)
         .def("visualize", &EngineWrapper::visualize)
         .def("tostring", &EngineWrapper::tostring)
+        .def("rule50_count", &EngineWrapper::rule50_count)
         ;
 }
 
