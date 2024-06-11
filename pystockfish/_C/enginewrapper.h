@@ -42,6 +42,7 @@ public:
     void go_nodes_limit(int nodes);
     void stop();
 
+    std::string get_best_move() const;
     std::unordered_map<std::string, std::string> get_evaluations() const;
     void clear_evaluations();
 
@@ -53,6 +54,7 @@ public:
     int rule50_count() const;
 private:
     Engine* engine_m;
+    std::string_view best_move_m;
     std::unordered_map<std::string, std::string> evaluations_m;
     bool is_going_m = false;
     int nodes_m = 0;

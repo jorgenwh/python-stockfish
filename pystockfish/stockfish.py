@@ -39,6 +39,9 @@ class Stockfish:
         else:
             assert False, "invalid option name '" + name + "'"
 
+    def get_best_move(self):
+        return self.engine.get_best_move()
+
     def get_evaluations(self):
         return self.engine.get_evaluations()
 

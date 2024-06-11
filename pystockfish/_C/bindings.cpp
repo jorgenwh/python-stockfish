@@ -21,6 +21,7 @@ PYBIND11_MODULE(pystockfish_C, m) {
         .def("go_nodes_limit", &EngineWrapper::go_nodes_limit)
         .def("stop", &EngineWrapper::stop)
 
+        .def("get_best_move", &EngineWrapper::get_best_move)
         .def("get_evaluations", &EngineWrapper::get_evaluations)
         .def("clear_evaluations", &EngineWrapper::clear_evaluations)
 

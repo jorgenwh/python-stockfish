@@ -122,6 +122,10 @@ std::unordered_map<std::string, std::string> EngineWrapper::get_evaluations() co
     return evaluations_m;
 }
 
+std::string EngineWrapper::get_best_move() const {
+    return std::string(best_move_m);
+}
+
 void EngineWrapper::clear_evaluations() {
     evaluations_m.clear();
 }
@@ -173,4 +177,6 @@ void EngineWrapper::on_update_full(const Engine::InfoFull& info, const Option& s
 }
 void EngineWrapper::on_iter(const Engine::InfoIter& info) { }
 void EngineWrapper::on_update_no_moves(const Engine::InfoShort& info) { }
-void EngineWrapper::on_bestmove(std::string_view bestmove, std::string_view ponder) { }
+void EngineWrapper::on_bestmove(std::string_view bestmove, std::string_view ponder) {
+    best_move_m = bestmove;
+}
